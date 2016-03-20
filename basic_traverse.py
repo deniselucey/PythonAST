@@ -2,12 +2,12 @@
 
 import ast
 
-def traverse_simple(node, depth = 0):
+def basic_traverse(node, depth = 0):
     print(" " * depth, "Node type %s " % node)
     print(" " * depth, "-fields: %s" % str(node._fields))
     children = ast.iter_child_nodes(node)
     for c in children:
-        traverse_simple(c, depth + 1)
+        basic_traverse(c, depth + 1)
 
 code = \
 """
@@ -21,4 +21,4 @@ factorial(4)
 """
 
 root = ast.parse(code)
-traverse_simple(root, 0)
+basic_traverse(root, 0)
