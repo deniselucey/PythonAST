@@ -1,2 +1,2 @@
 # PythonAST
-Simple AST code traversals and modifications.
+AST code traversals and modifications.
