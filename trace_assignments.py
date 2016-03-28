@@ -1,5 +1,5 @@
 #Inserts a print statement after every assignment
-#in subtree rooted at 'node'
+#in subtree rooted at node
 
 import ast
 
@@ -13,7 +13,7 @@ def traverse( node, parent ) :
 
         #Create appropriate print statement
         print_stmt_text = \
-            "print('Assignment: %s <-', %s)" \
+            "print('%s <-', %s)" \
             % (var_name, var_name)
         print_stmt_tree = \
             ast.parse(print_stmt_text).body[0]
@@ -44,7 +44,7 @@ for n in range(2, LIMIT+1):
 
     #print n if prime, linebreak every 10th prime
     if possiblePrime:
-        print("Wow %5i is a prime!" % n)
+        print("%i is a prime number" % n)
         numPrimes = numPrimes + 1
         if numPrimes % PERLINE == 0:
             print ("")
